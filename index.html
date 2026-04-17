@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropMall Special Promotion</title>
+
+    <!-- Google Fonts: Inter + Syne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind (local) -->
+    <script src="assets/js/tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pm-orange': '#F4980E',
+                        'pm-orange-light': '#F4A42A',
+                        'pm-red': '#EC221F',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'syne': ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter bg-white text-black">
+
+    <!-- ========== SECTION 1: Announcement Bar ========== -->
+    <section id="section-announcement" class="bg-black py-3.5 w-full">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-center gap-5 flex-wrap">
+            <img src="assets/img/pm-logo.png" alt="PropMall" class="h-8 w-auto">
+            <span class="text-white text-sm font-medium">
+                &#9889; Premium goes to <strong class="text-pm-orange font-bold">RM499</strong> on May 1 &mdash;
+                <a href="#pricing" class="text-pm-orange font-semibold underline hover:opacity-85 transition-opacity">Upgrade &amp; save RM134 &rarr;</a>
+            </span>
+        </div>
+    </section>
+    <!-- ========== END SECTION 1 ========== -->
+
+    <!-- ========== SECTION 2: Attention ========== -->
+    <section id="section-attention" class="relative overflow-hidden">
+
+        <!-- Background image — cropped, 20% opacity -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-20 z-0" style="background-image: url('assets/img/background.jpg');"></div>
+
+        <!-- Robot hands — cropped, spans full section bottom -->
+        <img src="assets/img/hand_background.png" alt="" class="absolute -bottom-20 lg:-bottom-28 left-1/2 -translate-x-[13%] w-[540px] lg:w-[820px] z-[1] pointer-events-none">
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-14 lg:py-20">
+            <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-[32px]">
+
+                <!-- Left: Video -->
+                <div class="flex-shrink-0 relative z-20">
+                    <div class="bg-[#1a1a1a] w-[90vw] md:w-[80vw] lg:w-[420px] xl:w-[550px] h-[280px] md:h-[320px] lg:h-[280px] xl:h-[320px] flex items-center justify-center">
+                        <div class="text-center text-gray-500">
+                            <i class="fas fa-play-circle text-4xl mb-2 block"></i>
+                            <p class="text-xs font-medium">Video Coming Soon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text -->
+                <div class="flex-1 relative z-10 text-center">
+                    <h2 class="font-syne font-bold text-pm-orange-light text-[38px] lg:text-[68px] leading-none mb-2">ATTENTION</h2>
+                    <p class="text-pm-red font-bold text-lg lg:text-3xl leading-snug mb-0.5">Portal costs keep rising.</p>
+                    <p class="text-black font-bold text-lg lg:text-3xl leading-snug mb-2 max-w-[665px] mx-auto">Half your enquiries are from fellow agents.</p>
+                    <p class="text-black font-bold text-sm lg:text-lg leading-relaxed mb-3 max-w-[665px] mx-auto">
+                        PropMall turns fellow agents into your co-marketing network. They bring ready buyers. <span class="text-pm-orange-light">You close more deals.</span>
+                    </p>
+                    <a href="#pricing" class="relative z-20 inline-block border-2 border-pm-red text-pm-red bg-transparent font-medium text-sm tracking-[4px] px-10 py-2.5 rounded-full hover:bg-pm-red hover:text-white transition-colors">
+                        READ CAREFULLY
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ========== END SECTION 2 ========== -->
+
+    <!-- ========== SECTION 3: Who's Actually Enquiring ========== -->
+    <section id="section-enquiring" class="bg-white">
+        <!-- Full-width heading row -->
+        <div class="w-full bg-white text-center py-10 lg:pt-14 lg:pb-10 px-6">
+            <p class="font-inter font-bold text-[24px] lg:text-[38px] text-black mb-0 leading-none">Portal costs keep rising.</p>
+            <h2 class="font-syne font-bold text-[38px] lg:text-[68px] leading-none mt-0.5 lg:mt-1 text-pm-orange-light">but who&rsquo;s actually enquiring?</h2>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pb-14 lg:pb-20 text-center">
+
+            <!-- Center image -->
+            <div>
+                <img src="assets/img/ImageWithFallback.png" alt="Stressed agent" class="mx-auto w-full lg:w-[820px] lg:h-[500px] object-cover">
+            </div>
+
+            <!-- System broken text -->
+            <p class="font-inter font-extrabold text-lg lg:text-[18px] mb-4">
+                <span class="text-black">The system is broken &mdash; </span><span class="text-pm-orange">and you&rsquo;re paying for it</span>
+            </p>
+
+            <div class="font-inter text-sm leading-relaxed max-w-3xl mx-auto mb-10 text-black">
+                <p>Every year agents pay more &mdash; because the fear of losing visibility is real. But <strong>what are you actually buying?</strong></p>
+                <p>A mixed feed of buyers and agents, with no way to tell them apart until you pick up the phone.</p>
+                <p>Here&rsquo;s the thing: <strong>those agent enquiries aren&rsquo;t wasted &mdash; they&rsquo;re your biggest untapped asset.</strong></p>
+                <p>Agents enquire because they have buyers. They just need a structured, professional way to collaborate.</p>
+            </div>
+
+            <!-- 3 Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
+
+                <!-- Card 1: Rising Every Year -->
+                <div class="relative pt-5">
+                    <div class="absolute -top-0 left-1/2 -translate-x-1/2 z-10 bg-pm-red text-white font-bold text-lg tracking-[4px] py-2 px-10 rounded-full whitespace-nowrap">
+                        RISING EVERY YEAR
+                    </div>
+                    <div class="border border-gray-300 rounded-lg pt-12 pb-6 px-4 h-full">
+                        <div class="mb-4">
+                            <img src="assets/img/coins-growth.png" alt="Rising costs" class="w-[320px] h-[210px] object-cover mx-auto">
+                        </div>
+                        <p class="font-semibold text-lg leading-snug">
+                            Portal listing fees go up year after year. Agents keep paying because they feel they have no choice.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: >50% Fellow Agents -->
+                <div class="relative pt-5">
+                    <div class="absolute -top-0 left-1/2 -translate-x-1/2 z-10 bg-pm-red text-white font-bold text-lg tracking-[4px] py-2 px-10 rounded-full whitespace-nowrap">
+                        &gt;50% Fellow agents
+                    </div>
+                    <div class="border border-gray-300 rounded-lg pt-12 pb-6 px-4 h-full">
+                        <div class="mb-4">
+                            <img src="assets/img/agent-reject.png" alt="Fellow agents" class="w-[320px] h-[210px] object-cover mx-auto">
+                        </div>
+                        <p class="font-semibold text-lg leading-snug">
+                            More than half your portal enquiries aren&rsquo;t buyers, they&rsquo;re fellow agents scouting your listings. <span class="text-pm-red">You&rsquo;re paying portals to fund your own competition.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Listing Chaos -->
+                <div class="relative pt-5">
+                    <div class="absolute -top-0 left-1/2 -translate-x-1/2 z-10 bg-pm-red text-white font-bold text-lg tracking-[4px] py-2 px-10 rounded-full whitespace-nowrap">
+                        Listing Chaos
+                    </div>
+                    <div class="border border-gray-300 rounded-lg pt-12 pb-6 px-4 h-full">
+                        <div class="mb-4">
+                            <img src="assets/img/listing-chaos.png" alt="Listing chaos" class="w-[320px] h-[210px] object-cover mx-auto">
+                        </div>
+                        <p class="font-semibold text-lg leading-snug">
+                            Most agents manage listings by blasting links to 5 portals, WhatsApp, Telegram groups. No structure, no tracking &mdash; just under 300 messages by morning.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#pricing" class="inline-block bg-pm-orange-light text-white font-bold text-lg tracking-[4px] py-6 px-20 rounded-none hover:opacity-90 transition-opacity">
+                I WANT TO SUBSCRIBE PROPMALL PREMIUM NOW!
+            </a>
+
+        </div>
+    </section>
+    <!-- ========== END SECTION 3 ========== -->
+
+    <!-- ========== SECTION 4: Stats Bar ========== -->
+    <section id="section-stats" class="bg-pm-red">
+        <div class="w-full py-8 lg:py-10">
+            <div class="flex flex-wrap justify-around text-center text-white gap-y-10 lg:gap-y-6">
+
+                <div class="w-full sm:w-1/2 lg:w-auto">
+                    <p class="font-extrabold text-[28px] lg:text-[38px] leading-none">8,000+</p>
+                    <p class="font-normal text-xs mt-2">Active Agents on PropMall</p>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-auto">
+                    <p class="font-extrabold text-[28px] lg:text-[38px] leading-none">&gt;50%</p>
+                    <p class="font-normal text-xs mt-2">Portal Enquiries Are Agents</p>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-auto">
+                    <p class="font-extrabold text-[28px] lg:text-[38px] leading-none">RM36K</p>
+                    <p class="font-normal text-xs mt-2">Max Annual Portal Waste</p>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-auto">
+                    <p class="font-extrabold text-[28px] lg:text-[38px] leading-none">RM365</p>
+                    <p class="font-normal text-xs mt-2">Full Year Premium</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ========== END SECTION 4 ========== -->
+
+    <!-- ========== SECTION 5: Lock in RM365/year ========== -->
+    <section id="section-pricing" class="relative overflow-hidden">
+
+        <!-- Background image — same style as section 2 -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-20 z-0" style="background-image: url('assets/img/background-s5.jpg');"></div>
+
+        <!-- Robot hands at bottom -->
+        <img src="assets/img/hand_background-s5.png" alt="" class="absolute -bottom-56 lg:-bottom-80 left-1/2 -translate-x-1/2 w-[1100px] lg:w-[1900px] z-[1] pointer-events-none">
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6 py-14 lg:py-20 text-center">
+
+            <!-- 1st row: Header texts -->
+            <a href="#pricing" class="inline-block border border-pm-red text-pm-red font-medium text-sm tracking-[4px] py-2 px-10 rounded-full mb-6">
+                PRICES
+            </a>
+
+            <h2 class="font-syne font-bold text-pm-orange-light text-[38px] lg:text-[68px] leading-none mb-1">Lock in RM365/year</h2>
+            <p class="font-inter font-bold text-[24px] lg:text-[38px] text-black leading-none mb-4">before May 1</p>
+            <p class="font-inter font-semibold text-base lg:text-lg text-black mx-auto mb-10">
+                Upgrade before May 1 and your price stays at RM365/year permanently &mdash;<br>
+                same Premium features, locked-in savings.
+            </p>
+
+            <!-- 2nd row: Pricing card -->
+            <div class="bg-white border border-[#B3B3B3] rounded-2xl px-10 py-10 lg:pt-10 lg:pb-12 max-w-2xl mx-auto">
+
+                <!-- Device mockup image -->
+                <div class="mb-6">
+                    <img src="assets/img/laptop-view-propmall.png" alt="PropMall on devices" class="mx-auto w-full h-auto">
+                </div>
+
+                <!-- Price -->
+                <div class="flex items-center justify-center mb-1">
+                    <span class="font-medium text-[22px] text-black">RM</span>
+                    <span class="font-extrabold text-[70px] text-black leading-none">365</span>
+                    <span class="font-medium text-lg text-black self-end">/year</span>
+                </div>
+
+                <p class="font-semibold text-lg text-black mb-4">That&rsquo;s just RM1/day</p>
+
+                <!-- Save badge -->
+                <div class="inline-block bg-pm-red text-white font-bold text-lg tracking-[4px] py-3 px-10 border border-white rounded-full mb-6">
+                    Save RM134 vs. RM499
+                </div>
+
+                <!-- Feature list -->
+                <div class="max-w-xl mx-auto text-left">
+                    <!-- Listing Management -->
+                    <div class="flex items-center gap-3 py-3 border-b border-gray-100">
+                        <img src="assets/img/mark-icon.svg" alt="check" class="w-5 h-5">
+                        <span class="font-semibold text-base text-black">Listing Management</span>
+                    </div>
+                    <!-- Unlimited Listing -->
+                    <div class="flex items-center gap-3 py-3 border-b border-gray-100">
+                        <img src="assets/img/mark-icon.svg" alt="check" class="w-5 h-5">
+                        <span class="font-semibold text-base text-black">Unlimited Listing</span>
+                    </div>
+                    <!-- Co Marketing -->
+                    <div class="flex items-center justify-between py-3 border-b border-gray-100">
+                        <div class="flex items-center gap-3">
+                            <img src="assets/img/mark-icon.svg" alt="check" class="w-5 h-5">
+                            <span class="font-semibold text-base text-black">Co Marketing</span>
+                        </div>
+                        <span class="text-white font-medium text-sm bg-[#00C950] rounded py-1 px-3">Full Access</span>
+                    </div>
+                    <!-- Listing Repost -->
+                    <div class="flex items-center justify-between py-3 border-b border-gray-100">
+                        <div class="flex items-center gap-3">
+                            <img src="assets/img/mark-icon.svg" alt="check" class="w-5 h-5">
+                            <span class="font-semibold text-base text-black">Listing Repost</span>
+                        </div>
+                        <span class="text-white font-medium text-sm bg-[#00C950] rounded py-1 px-3">Full Access</span>
+                    </div>
+                    <!-- CTA Button -->
+                    <a href="#" class="block w-full bg-pm-orange-light text-white font-bold text-lg tracking-[4px] py-6 rounded-none border border-white hover:opacity-90 transition-opacity text-center mt-6">
+                        LOCK IN RM365/YEAR &rarr;
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ========== END SECTION 5 ========== -->
+
+    <!-- ========== SECTION 6: Portal vs PropMall ========== -->
+    <section id="section-comparison" class="bg-white">
+        <div class="max-w-4xl mx-auto px-6 pt-14 pb-12 lg:pt-20 lg:pb-16 text-center">
+
+            <!-- Heading -->
+            <p class="font-inter font-extrabold text-[30px] lg:text-[46px] text-black mb-0 leading-none">Portal vs PropMall</p>
+            <h2 class="font-syne font-bold text-[38px] lg:text-[68px] leading-tight mt-1 text-pm-orange-light mb-10">A different game</h2>
+
+            <!-- Comparison: 2 columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+                <!-- Left: Other Portals -->
+                <div class="relative pt-5">
+                    <div class="absolute -top-0 left-1/2 -translate-x-1/2 z-10 border border-pm-red text-pm-red bg-white font-bold text-lg tracking-[4px] py-2 px-8 rounded-full whitespace-nowrap">
+                        &#10006; other portals
+                    </div>
+                    <div class="border border-gray-300 rounded-2xl pt-12 pb-8 px-6 h-full text-left">
+                        <h3 class="font-bold text-[22px] lg:text-[30px] text-black text-center mb-4">What you&rsquo;re used to:</h3>
+                        <ol class="list-decimal list-inside space-y-2 font-medium text-base text-black">
+                            <li>You pay RM3,500 - RM5,000/year</li>
+                            <li>Your enquiries go to 3-5 agents</li>
+                            <li>You compete for every lead</li>
+                            <li>Hidden fees, price hikes annually</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Right: PropMall Premium -->
+                <div class="relative pt-5">
+                    <div class="absolute -top-0 left-1/2 -translate-x-1/2 z-10 bg-pm-orange-light text-white font-bold text-lg tracking-[4px] py-2 px-8 rounded-full whitespace-nowrap">
+                        PROPMALL PREMIUM
+                    </div>
+                    <div class="border border-gray-300 rounded-2xl pt-12 pb-8 px-6 h-full text-left">
+                        <h3 class="font-bold text-[22px] lg:text-[30px] text-black text-center mb-4">What you get instead:</h3>
+                        <ol class="list-decimal list-inside space-y-2 font-medium text-base text-black">
+                            <li>You pay RM365/year (RM1/day)</li>
+                            <li>Your enquiries go ONLY to you</li>
+                            <li>Zero competition on your leads</li>
+                            <li>All-in pricing. No surprises.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- You Save section -->
+            <div class="relative pt-5">
+                <div class="absolute -top-0 left-1/2 -translate-x-1/2 z-10 bg-[#00C950] text-white font-bold text-lg tracking-[4px] py-2 px-8 rounded-full whitespace-nowrap flex items-center gap-2">
+                    <img src="assets/img/white-mark-right-icon.png" alt="check" class="w-5 h-5"> YOU SAVE
+                </div>
+                <div class="border border-gray-300 rounded-2xl pt-12 pb-8 px-6 text-left w-full">
+                    <h3 class="font-bold text-[22px] lg:text-[30px] text-black text-center mb-4">Your Listing Gets Leveraged:</h3>
+                    <ol class="list-decimal list-inside space-y-2 font-medium text-base text-black">
+                        <li>Save RM3,135 - RM4,635/year</li>
+                        <li>You control &mdash; approve or decline any co-agency</li>
+                        <li>Lock in rate &mdash; never increases</li>
+                        <li>One deal closed = sub paid back 100&times;</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#" class="block w-full bg-pm-orange-light text-white font-bold text-lg tracking-[4px] py-6 rounded-none border border-white hover:opacity-90 transition-opacity mt-12 text-center">
+                I WANT TO SUBSCRIBE PROPMALL PREMIUM NOW!
+            </a>
+
+        </div>
+    </section>
+    <!-- ========== END SECTION 6 ========== -->
+
+    <!-- ========== SECTION 7: Everything Your Listings Need ========== -->
+    <section id="section-features" class="bg-white">
+        <!-- Header — wider container -->
+        <div class="max-w-6xl mx-auto px-6 pt-12 lg:pt-16 pb-10 text-center">
+            <span class="inline-block border border-pm-red text-pm-red font-medium text-sm tracking-[4px] py-2 px-10 rounded-full mb-6">
+                PREMIUM FEATURES
+            </span>
+            <h2 class="font-syne font-bold text-pm-orange-light text-[38px] lg:text-[68px] leading-none mb-1">Everything your listings need</h2>
+            <p class="font-inter font-bold text-[24px] lg:text-[38px] text-black leading-none mb-4">in one place</p>
+        </div>
+
+        <!-- Mobile layout — single column, image then text -->
+        <div class="md:hidden max-w-4xl mx-auto px-6 pb-14">
+
+            <!-- 1. Handshake + Co-marketing -->
+            <div class="mb-8">
+                <img src="assets/img/s7-handshake.png" alt="Co-marketing" class="w-full aspect-video object-cover mb-3">
+                <h3 class="font-extrabold text-[26px] text-black mb-1">Co-marketing</h3>
+                <p class="font-normal text-base text-black leading-snug">Agents with buyer networks co-market your listings. They bring buyers, you share the deal. Zero extra ad spend.</p>
+            </div>
+
+            <!-- 2. Couple + Listing Repost -->
+            <div class="mb-8">
+                <img src="assets/img/s7-comarketing.png" alt="Listing Repost" class="w-full object-cover mb-3">
+                <h3 class="font-extrabold text-[26px] text-black mb-1">Listing Repost</h3>
+                <p class="font-normal text-base text-black leading-snug">Auto-repost listings to stay visible across the network. Always fresh, always active &mdash; without manual effort.</p>
+            </div>
+
+            <!-- 3. Jigsaw + Matching Feature -->
+            <div class="mb-8">
+                <img src="assets/img/s7-puzzle.png" alt="Matching Feature" class="w-full h-auto object-cover mb-3">
+                <h3 class="font-extrabold text-[26px] text-black mb-1">Matching Feature</h3>
+                <p class="font-normal text-base text-black leading-snug">AI matches agents with relevant buyers to your listings automatically. The right co-agency partner finds you.</p>
+            </div>
+
+            <!-- 4. Phone + Listing Freshness -->
+            <div class="mb-8">
+                <img src="assets/img/s7-realestate.png" alt="Listing Freshness" class="w-full h-auto object-cover mb-3">
+                <h3 class="font-extrabold text-[26px] text-black mb-1">Listing Freshness (LF)</h3>
+                <p class="font-normal text-base text-black leading-snug">Every listing shows how recently it was updated &mdash; so buyers and co-agents always know what&rsquo;s current.</p>
+            </div>
+
+            <!-- 5. Property + Unlimited Listing -->
+            <div class="mb-8">
+                <img src="assets/img/s7-property.png" alt="Unlimited Listing" class="w-full h-auto object-cover mb-3">
+                <h3 class="font-extrabold text-[26px] text-black mb-1">Unlimited Listing</h3>
+                <p class="font-normal text-base text-black leading-snug">List as many projects and units as you need. No caps, no hidden limits &mdash; your full portfolio, always visible.</p>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#" class="block w-full bg-pm-orange-light text-white font-bold text-lg tracking-[4px] py-6 rounded-none border border-white hover:opacity-90 transition-opacity mt-12 text-center">
+                I WANT TO SUBSCRIBE PROPMALL PREMIUM NOW!
+            </a>
+        </div>
+
+        <!-- Desktop zig-zag layout -->
+        <div class="hidden md:block max-w-4xl mx-auto px-6 pb-14 lg:pb-20">
+
+            <!-- Feature 1 & 2: Co-marketing + Listing Repost -->
+            <div class="flex flex-row items-stretch gap-6 mb-12">
+                <!-- Left: couple image (tall) -->
+                <div class="w-1/2">
+                    <img src="assets/img/s7-comarketing.png" alt="Co-marketing" class="w-full object-cover">
+                </div>
+                <!-- Right: everything stacks vertically -->
+                <div class="w-1/2 px-2">
+                    <h3 class="font-extrabold text-[26px] lg:text-[34px] text-black mb-1">Co- marketing</h3>
+                    <div class="relative">
+                        <p class="font-normal text-base text-black leading-snug mb-2">Agents with buyer networks co-market your listings. They bring buyers, you share the deal. Zero extra ad spend.</p>
+                        <img src="assets/img/stripe-arrow.svg" alt="" aria-hidden="true" class="hidden lg:block absolute -bottom-3 right-5 w-[214px] z-10 -rotate-[0.74deg] pointer-events-none">
+                    </div>
+                    <img src="assets/img/s7-handshake.png" alt="Handshake" class="w-[95%] aspect-video object-cover mb-6 mx-auto">
+                    <div class="relative">
+                        <img src="assets/img/stripe-arrow.svg" alt="" aria-hidden="true" class="hidden lg:block absolute -top-2 -left-8 w-[214px] z-10 -rotate-[3.26deg] pointer-events-none">
+                        <h3 class="font-extrabold text-[26px] lg:text-[34px] text-black mb-1 pt-2">Listing Repost</h3>
+                    </div>
+                    <p class="font-normal text-base text-black leading-snug">Auto-repost listings to stay visible across the network. Always fresh, always active &mdash; without manual effort.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 & 4: Matching Feature + Listing Freshness -->
+            <div class="mb-12">
+                <!-- 1st row: Matching Feature text (left) + Puzzle image (right) -->
+                <div class="flex flex-row items-start gap-4 mb-4">
+                    <div class="w-2/5">
+                        <div class="relative inline-block mb-2">
+                            <h3 class="font-extrabold text-[26px] lg:text-[34px] text-black">Matching Feature</h3>
+                            <img src="assets/img/stripe-arrow-2.svg" alt="" aria-hidden="true" class="hidden lg:block absolute -bottom-4 -right-[75px] w-[247px] z-10 -rotate-[0.74deg] pointer-events-none">
+                        </div>
+                        <p class="font-normal text-base text-black leading-snug mb-4 pr-14">AI matches agents with relevant buyers to your listings automatically. The right co-agency partner finds you.</p>
+                    </div>
+                    <div class="w-3/5">
+                        <img src="assets/img/s7-puzzle.png" alt="Puzzle" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <!-- 2nd row: Phone image (left, overlaps puzzle) + Listing Freshness text (right) -->
+                <div class="flex flex-row items-start gap-4 relative z-20 -mt-36 translate-x-5">
+                    <div class="w-[54%]">
+                        <img src="assets/img/s7-realestate.png" alt="Matching Feature" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="w-[46%] pt-36">
+                        <div class="relative inline-block mb-1">
+                            <img src="assets/img/stripe-arrow-2.svg" alt="" aria-hidden="true" class="hidden lg:block absolute -top-5 -left-[20px] w-[230px] z-10 rotate-[1deg] pointer-events-none">
+                            <h3 class="font-extrabold text-[26px] lg:text-[34px] text-black">Listing Freshness (LF)</h3>
+                        </div>
+                        <p class="font-normal text-base text-black leading-snug">Every listing shows how recently it was updated &mdash; so buyers and co-agents always know what&rsquo;s current.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Unlimited Listing -->
+            <div class="mb-14 max-w-2xl mx-auto">
+                <div class="flex flex-row items-start justify-center gap-4">
+                    <div class="w-[44%]">
+                        <h3 class="font-extrabold text-[26px] lg:text-[34px] text-black mb-2">Unlimited Listing</h3>
+                        <div class="relative inline-block">
+                            <p class="font-normal text-base text-black leading-snug">List as many projects and units as you need. No caps, no hidden limits &mdash; your full portfolio, always visible.</p>
+                            <img src="assets/img/stripe-arrow-2.svg" alt="" aria-hidden="true" class="hidden lg:block absolute -bottom-8 left-14 w-[247px] z-10 -rotate-[0.74deg] pointer-events-none">
+                        </div>
+                    </div>
+                    <div class="w-[56%]">
+                        <img src="assets/img/s7-property.png" alt="Unlimited Listing" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#" class="block w-full bg-pm-orange-light text-white font-bold text-lg tracking-[4px] py-6 rounded-none border border-white hover:opacity-90 transition-opacity mt-12 text-center">
+                I WANT TO SUBSCRIBE PROPMALL PREMIUM NOW!
+            </a>
+
+        </div>
+    </section>
+    <!-- ========== END SECTION 7 ========== -->
+
+    <!-- ========== SECTION 8: Countdown Timer ========== -->
+    <section id="section-countdown" class="bg-[#EC221F]">
+        <div class="max-w-7xl mx-auto px-6 py-8 lg:py-10">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+
+                <!-- Text: Price rises to RM499 in -->
+                <p class="font-inter font-bold text-[22px] lg:text-[30px] tracking-[0.7px] uppercase text-white text-center md:text-left">
+                    PRICE RISES TO RM499 IN
+                </p>
+
+                <!-- Countdown boxes -->
+                <div class="flex items-center gap-2 lg:gap-3" id="countdown-timer">
+                    <!-- Days -->
+                    <div class="w-[60px] lg:w-[72px] py-3 rounded-lg border border-[#E5E7EB] shadow-md text-center" style="background: linear-gradient(to bottom, #F9FAFB, #F3F4F6);">
+                        <span id="countdown-days" class="font-inter font-extrabold text-[28px] text-black leading-none block">00</span>
+                        <span class="font-inter font-normal text-[8px] tracking-[0.5px] uppercase text-[#6A7282] mt-1 block">Days</span>
+                    </div>
+                    <!-- Hours -->
+                    <div class="w-[60px] lg:w-[72px] py-3 rounded-lg border border-[#E5E7EB] shadow-md text-center" style="background: linear-gradient(to bottom, #F9FAFB, #F3F4F6);">
+                        <span id="countdown-hrs" class="font-inter font-extrabold text-[28px] text-black leading-none block">00</span>
+                        <span class="font-inter font-normal text-[8px] tracking-[0.5px] uppercase text-[#6A7282] mt-1 block">Hrs</span>
+                    </div>
+                    <!-- Minutes -->
+                    <div class="w-[60px] lg:w-[72px] py-3 rounded-lg border border-[#E5E7EB] shadow-md text-center" style="background: linear-gradient(to bottom, #F9FAFB, #F3F4F6);">
+                        <span id="countdown-min" class="font-inter font-extrabold text-[28px] text-black leading-none block">00</span>
+                        <span class="font-inter font-normal text-[8px] tracking-[0.5px] uppercase text-[#6A7282] mt-1 block">Min</span>
+                    </div>
+                    <!-- Seconds -->
+                    <div class="w-[60px] lg:w-[72px] py-3 rounded-lg border border-[#E5E7EB] shadow-md text-center" style="background: linear-gradient(to bottom, #F9FAFB, #F3F4F6);">
+                        <span id="countdown-sec" class="font-inter font-extrabold text-[28px] text-black leading-none block">00</span>
+                        <span class="font-inter font-normal text-[8px] tracking-[0.5px] uppercase text-[#6A7282] mt-1 block">Sec</span>
+                    </div>
+                </div>
+
+                <!-- Ends date -->
+                <p class="font-inter text-[18px] text-white text-center md:text-left">
+                    Ends <strong class="font-bold">May 1, 2026 &middot; 12:00 AM MYT</strong>
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <!-- ========== END SECTION 8 ========== -->
+
+    <!-- ========== SECTION 9: What Premium Agents Are Actually Saying ========== -->
+    <section id="section-testimonials" class="bg-white">
+        <div class="max-w-4xl mx-auto px-6 py-14 lg:py-20">
+
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <p class="font-inter font-extrabold text-[30px] lg:text-[46px] text-black leading-none mb-0">What premium agents are</p>
+                <h2 class="font-syne font-bold text-[38px] lg:text-[68px] leading-tight text-pm-orange-light">actually saying</h2>
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="space-y-6 mb-12 max-w-2xl mx-auto">
+
+                <!-- Card 1: Video left, Agent right -->
+                <div class="flex flex-col md:flex-row items-center gap-6 bg-white border border-[#D9D9D9] rounded-2xl shadow-md py-6 px-8">
+                    <div class="flex-shrink-0">
+                        <div class="bg-[#1a1a1a] w-[300px] lg:w-[350px] h-[180px] lg:h-[200px] rounded-lg flex items-center justify-center">
+                            <div class="text-center text-gray-500">
+                                <i class="fas fa-play-circle text-3xl mb-1 block"></i>
+                                <p class="text-xs font-medium">Video Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center text-center">
+                        <img src="assets/img/s9-agent.png" alt="Ahmad Haziq" class="w-[140px] h-[140px] rounded-full object-cover mb-2">
+                        <p class="font-inter font-extrabold text-sm text-black">Ahmad Haziq</p>
+                        <p class="font-inter font-normal text-xs text-black">Senior Negotiator, IQI KL</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Agent left, Video right -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 bg-white border border-[#D9D9D9] rounded-2xl shadow-md py-6 px-8">
+                    <div class="flex-shrink-0">
+                        <div class="bg-[#1a1a1a] w-[300px] lg:w-[350px] h-[180px] lg:h-[200px] rounded-lg flex items-center justify-center">
+                            <div class="text-center text-gray-500">
+                                <i class="fas fa-play-circle text-3xl mb-1 block"></i>
+                                <p class="text-xs font-medium">Video Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center text-center">
+                        <img src="assets/img/s9-agent.png" alt="Ahmad Haziq" class="w-[140px] h-[140px] rounded-full object-cover mb-2">
+                        <p class="font-inter font-extrabold text-sm text-black">Ahmad Haziq</p>
+                        <p class="font-inter font-normal text-xs text-black">Senior Negotiator, IQI KL</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Video left, Agent right -->
+                <div class="flex flex-col md:flex-row items-center gap-6 bg-white border border-[#D9D9D9] rounded-2xl shadow-md py-6 px-8">
+                    <div class="flex-shrink-0">
+                        <div class="bg-[#1a1a1a] w-[300px] lg:w-[350px] h-[180px] lg:h-[200px] rounded-lg flex items-center justify-center">
+                            <div class="text-center text-gray-500">
+                                <i class="fas fa-play-circle text-3xl mb-1 block"></i>
+                                <p class="text-xs font-medium">Video Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center text-center">
+                        <img src="assets/img/s9-agent.png" alt="Ahmad Haziq" class="w-[140px] h-[140px] rounded-full object-cover mb-2">
+                        <p class="font-inter font-extrabold text-sm text-black">Ahmad Haziq</p>
+                        <p class="font-inter font-normal text-xs text-black">Senior Negotiator, IQI KL</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#" class="block w-full bg-pm-orange-light text-white font-bold text-lg tracking-[4px] py-6 rounded-none border border-white hover:opacity-90 transition-opacity mt-12 text-center">
+                I WANT TO SUBSCRIBE PROPMALL PREMIUM NOW!
+            </a>
+
+        </div>
+    </section>
+    <!-- ========== END SECTION 9 ========== -->
+
+    <!-- Countdown Timer Script -->
+    <script>
+        (function () {
+            // Deadline: May 1, 2026 · 12:00 AM MYT (UTC+8)
+            const deadline = new Date('2026-05-01T00:00:00+08:00').getTime();
+
+            const daysEl = document.getElementById('countdown-days');
+            const hrsEl = document.getElementById('countdown-hrs');
+            const minEl = document.getElementById('countdown-min');
+            const secEl = document.getElementById('countdown-sec');
+
+            function pad(n) {
+                return String(n).padStart(2, '0');
+            }
+
+            function update() {
+                const now = Date.now();
+                const diff = deadline - now;
+
+                if (diff <= 0) {
+                    daysEl.textContent = '00';
+                    hrsEl.textContent = '00';
+                    minEl.textContent = '00';
+                    secEl.textContent = '00';
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hrs = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const min = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const sec = Math.floor((diff % (1000 * 60)) / 1000);
+
+                daysEl.textContent = pad(days);
+                hrsEl.textContent = pad(hrs);
+                minEl.textContent = pad(min);
+                secEl.textContent = pad(sec);
+            }
+
+            update();
+            setInterval(update, 1000);
+        })();
+    </script>
+
+</body>
+</html>
