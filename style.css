@@ -3,6 +3,87 @@
    (Tailwind handles most styling via classes)
    ============================================ */
 
+/* Smooth scroll for all anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section 2: ATTENTION slide-up animation */
+@keyframes attention-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.attention-heading {
+    animation: attention-slide-up 0.9s ease-out 0.2s both;
+}
+
+/* FAQ accordion hover — title turns orange when hovering the row */
+.faq-toggle > span:first-child {
+    transition: color 0.2s ease;
+}
+
+.faq-toggle:hover > span:first-child {
+    color: #F4A42A !important;
+}
+
+/* FAQ icon turns orange when accordion is open */
+.faq-icon.is-open {
+    color: #F4A42A !important;
+}
+
+/* Rocking animation */
+@keyframes rocking {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-2.5deg);
+    }
+    75% {
+        transform: rotate(2.5deg);
+    }
+}
+
+.buttonRocking {
+    display: inline-block;
+    animation: rocking 2s infinite;
+    animation-timing-function: ease-out;
+    transition: .2s;
+    transform-origin: center;
+}
+
+/* Subscribe button bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.buttonElevate {
+    box-shadow: 0 0 0 0 transparent;
+    transition: .2s;
+}
+
+.buttonBounce {
+    animation: bounce 1.5s infinite;
+    animation-timing-function: ease-in;
+    transition: .2s;
+}
+
+
 /* Section 1: mobile stack */
 @media (max-width: 576px) {
     #section-announcement > div {
