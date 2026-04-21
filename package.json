@@ -1,0 +1,25 @@
+{
+  "name": "propmall-promotion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --minify",
+    "watch-css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harithiqi/propmall-special-promotion-lp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harithiqi/propmall-special-promotion-lp/issues"
+  },
+  "homepage": "https://github.com/harithiqi/propmall-special-promotion-lp#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

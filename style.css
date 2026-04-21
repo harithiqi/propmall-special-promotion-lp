@@ -24,6 +24,12 @@ html {
     animation: attention-slide-up 0.9s ease-out 0.2s both;
 }
 
+/* YouTube facade — keyboard focus outline */
+.yt-facade:focus-visible {
+    outline: 3px solid #F4A42A;
+    outline-offset: 2px;
+}
+
 /* FAQ accordion hover — title turns orange when hovering the row */
 .faq-toggle > span:first-child {
     transition: color 0.2s ease;
