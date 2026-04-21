@@ -103,6 +103,15 @@ customElements.define('subscribe-button', SubscribeButton);
         if (intervalId) clearInterval(intervalId);
     }
 
+    function setDigit(el, value) {
+        const next = pad(value);
+        if (el.textContent === next) return;
+        el.textContent = next;
+        el.classList.remove('cdp');
+        void el.offsetWidth; // force reflow so the animation restarts
+        el.classList.add('cdp');
+    }
+
     function update() {
         const diff = deadline - Date.now();
 
@@ -116,10 +125,10 @@ customElements.define('subscribe-button', SubscribeButton);
         const min = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const sec = Math.floor((diff % (1000 * 60)) / 1000);
 
-        daysEl.textContent = pad(days);
-        hrsEl.textContent = pad(hrs);
-        minEl.textContent = pad(min);
-        secEl.textContent = pad(sec);
+        setDigit(daysEl, days);
+        setDigit(hrsEl, hrs);
+        setDigit(minEl, min);
+        setDigit(secEl, sec);
     }
 
     update();

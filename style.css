@@ -65,6 +65,22 @@ html {
     transform-origin: center;
 }
 
+/* Countdown digit tick animation */
+@keyframes cdp {
+    0% {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cdp {
+    animation: 0.2s ease 0s 1 normal none running cdp;
+}
+
 /* Subscribe button bounce */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
