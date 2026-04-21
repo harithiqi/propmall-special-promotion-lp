@@ -40,12 +40,15 @@
 /* ---------- 2. Subscribe Button web component ---------- */
 class SubscribeButton extends HTMLElement {
     connectedCallback() {
-        const href = this.getAttribute('href') || '#section-pricing';
+        const href = this.getAttribute('href') || 'https://propmall.co/subscribe';
         const variant = this.getAttribute('variant') || 'full';
         const extra = this.getAttribute('extra-class') || '';
         const base = 'buttonElevate buttonBounce bg-pm-orange-light text-white font-bold text-sm lg:text-lg tracking-[4px] py-6 rounded-none border border-white hover:opacity-90 transition-opacity text-center';
         const layout = variant === 'inline' ? 'inline-block px-8 lg:px-20' : 'block w-full';
-        this.innerHTML = `<a href="${href}" class="${layout} ${base} ${extra}">I WANT TO SUBSCRIBE PROPMALL PREMIUM NOW!</a>`;
+        // External links open in new tab; internal anchors (#...) stay in same tab
+        const isExternal = !href.startsWith('#');
+        const target = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+        this.innerHTML = `<a href="${href}"${target} class="${layout} ${base} ${extra}">I WANT TO SUBSCRIBE PROPMALL PREMIUM NOW!</a>`;
     }
 }
 customElements.define('subscribe-button', SubscribeButton);
