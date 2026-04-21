@@ -8,6 +8,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Tracked pill: label with letter-spacing that stays visually centered.
+   The trailing letter-spacing creates empty space after the last letter,
+   which shifts the text off-center. We compensate by adding the tracking
+   value to the left padding. */
+.tracked-pill {
+    --pill-px: 2rem;           /* base horizontal padding (matches px-8) */
+    --pill-tracking: 4px;      /* letter-spacing value */
+    display: inline-block;
+    padding: 0.5rem var(--pill-px);
+    padding-left: calc(var(--pill-px) + var(--pill-tracking));
+    letter-spacing: var(--pill-tracking);
+    text-transform: uppercase;
+    border-radius: 9999px;
+}
+
 /* Section 2: ATTENTION slide-up animation */
 @keyframes attention-slide-up {
     from {
