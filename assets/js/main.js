@@ -79,8 +79,8 @@ customElements.define('subscribe-button', SubscribeButton);
 
 /* ---------- 4. Countdown timer ---------- */
 (function () {
-    // Deadline: May 1, 2026 · 12:00 AM MYT (UTC+8)
-    const deadline = new Date('2026-05-01T00:00:00+08:00').getTime();
+    // Deadline: June 1, 2026 · 12:00 AM MYT (UTC+8)
+    const deadline = new Date('2026-06-01T00:00:00+08:00').getTime();
 
     const activeEl = document.getElementById('countdown-active');
     const expiredEl = document.getElementById('countdown-expired');
